@@ -121,6 +121,7 @@ Notes:
 
 ## Table Results
 Description: To table fields from the results of a search in SPL vs CQL
+
 **Splunk**
 
 ```| table field1 field2 field3 field4```
