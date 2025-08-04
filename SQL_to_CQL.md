@@ -110,8 +110,6 @@ Description: In Splunk alot of times you want a field to have value but you're u
 ```| field=value*```
 
 
-Note: the "*" wild card is used in SPL, where in CQL you call the field again but with a "?" leading.
-
 ## Regex Syntax
 Description: To use regex filtering in your CQL query.
 
