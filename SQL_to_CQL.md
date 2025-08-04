@@ -118,3 +118,13 @@ Notes:
 + | or statement
 + / regex / used to identify regex
 + one \ needed to escape single "\\"
+
+## Table Results
+Description: To table fields from the results of a search in SPL vs CQL
+**Splunk**
+
+```| table field1 field2 field3 field4```
+
+**CQL**
+
+```| select([field1, field2, field3, field4])``` 
