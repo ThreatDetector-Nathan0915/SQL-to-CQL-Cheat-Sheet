@@ -141,3 +141,15 @@ Description: To table fields from the results of a search in SPL vs CQL
 **CQL**
 
 ```| select([field1, field2, field3, field4])``` 
+## Stats Count
+Description: Stats is very powerfull in splunk na dcan be used to corelate and filter results, in CQL "group" is the equivalent.
+
+**Splunk**
+
+```| Stats count by field```
+
+**CQL**
+
+```| groupBy([field], limit=max)``` 
+
+Notes: This is a very simple example and it can get exponentially more complex. But just as a starter they both do the same thing they group results by the chosen field. With the caveat that CQL has a limit of 20k results so if you want more than that you must define a greater limit with ", limit=max"
