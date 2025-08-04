@@ -175,9 +175,9 @@ Description: Stats is very powerfull in splunk na dcan be used to corelate and f
 
 **CQL**
 
-```| groupBy([field], limit=max)``` 
+```| groupBy([field1], function=count(field1, as=field1), limit=max)``` 
 
-Notes: This is a very simple example and it can get exponentially more complex. But just as a starter they both do the same thing they group results by the chosen field. With the caveat that CQL has a limit of 20k results so if you want more than that you must define a greater limit with ", limit=max"
+Notes: This is a very simple example and it can get exponentially more complex. But just as a starter they both do the same thing they group results by the chosen field. With the caveat that CQL has a limit of 20k results so if you want more than that you must define a greater limit with ", limit=max". Also instead of calling "count" like in splunk we are calling the count function and defining was field we want counted and what we want the result name field returned as.
 
 ## Drilldown Filter (Unsupported in Splunk Search)
 Description: In CrowdStrike when conducting searches you may want to filter through your tabled out results. Similar to how a splunk drilldowns in dashboard works. You can do this directly in the query rather than creating an entire dashboard that calls the search like in SPL.
