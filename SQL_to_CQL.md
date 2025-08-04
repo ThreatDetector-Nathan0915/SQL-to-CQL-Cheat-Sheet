@@ -1,4 +1,4 @@
-# To help all splunkers (SPL) who have been forced to adopt Crowdstrike Query Language (CQL)
+# To help all splunkers in Splunk Processing Language (SPL) who have been forced to adopt Crowdstrike Query Language (CQL)
 ## Basic Field Search
 Description: To conduct a basic search in SPL vs CQL
 
@@ -12,7 +12,7 @@ Description: To conduct a basic search in SPL vs CQL
 
 Notes: No need to define index or sourcetype, there is only CS just search off event_simpleName "#" is required.
 
-## Logic Operators (token)
+## Token Search
 Description: To conduct a "token" search in SPL vs CQL
 
 **Splunk**
@@ -68,6 +68,22 @@ Description: To conduct a conitional search in SPL vs CQL where NOT is used
 ```#event_simpleName=foo token1 field!=value```
 
 Notes: In both splunk and CS the syntax is nearly identical.
+## Comparison Operators
+Description: These are identical to Splunk.
+
+**CQL/Splunk**
+
+```field < value```
+
+```field <= value```
+
+```field = value```
+
+```field != value```
+
+```field >= value```
+
+```field > value``` 
 
 ## Create New Field
 Description: To make a new field from a value in the search use the following syntax.
