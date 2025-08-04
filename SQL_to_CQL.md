@@ -185,7 +185,9 @@ Description: In CrowdStrike when conducting searches you may want to filter thro
 **Splunk Dashboard Logic**
 
 ```<drilldown>```
+
       ```<eval token="arg1">$click.value2$</eval>```
+      
 ```</drilldown>```
 
 **CQL**
