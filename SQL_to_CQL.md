@@ -48,6 +48,7 @@ Description: To conduct a conitional search in SPL vs CQL where NOT is used
 **CQL**
 
 ```#event_simpleName=foo token1 not token2``` 
+
 ```#event_simpleName=foo token1 !token2```
 
 Notes: In both splunk and CS the not term, but in CQL lowercase. Additional functionality not present in SPL is, !token which uses the "!" as a not as well.
