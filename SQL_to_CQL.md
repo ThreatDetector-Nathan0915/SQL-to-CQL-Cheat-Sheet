@@ -190,6 +190,6 @@ Description: In CrowdStrike when conducting searches you may want to filter thro
 
 **CQL**
 
-```| drilldown_name=?field``` 
+```| field=?drilldown_name``` 
 
 Notes: You must name what you want your drill down to be called than specify a field that you want to be searchable. Somewhat impressed by this feature.
