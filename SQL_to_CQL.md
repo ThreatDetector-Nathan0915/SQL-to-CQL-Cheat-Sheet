@@ -141,7 +141,7 @@ Description: To use regex field extraction
 ```| rex field=field "(?<new_field>(?is)pattern_to_match.+)"```
 
 Notes: 
-+ (?is) - case incentive token space incentive token.
++ (?i) - case incentive token
 + | rex - use regex field extraction
 + " regex " - this is regex pattern
 + (?<new_field>pattern_to_match) - this is field name and pattern I want in that field
