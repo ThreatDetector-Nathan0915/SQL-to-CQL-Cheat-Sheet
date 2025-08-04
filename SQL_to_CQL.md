@@ -81,6 +81,8 @@ Description: To make a new field from a value in the search use the following sy
 
 ```| eval field=value```
 
+```| eval field=field```
+
 **CQL**
 
 ```| field := value``` 
