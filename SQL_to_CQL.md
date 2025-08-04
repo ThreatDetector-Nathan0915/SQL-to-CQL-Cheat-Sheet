@@ -212,6 +212,22 @@ Notes:
 ## Drilldown Filter (Unsupported in Splunk Search)
 Description: In CrowdStrike when conducting searches you may want to filter through your tabled out results. Similar to how a splunk drilldowns in dashboard works. You can do this directly in the query rather than creating an entire dashboard that calls the search like in SPL.
 
+## Joining Events
+Description: Many times throughout creation of correlation searches two events will need to be joined together, in SPL this will often be through a join, transaction, or stats command. From there further evaluations can be conducted on the Joined events to further filter on relavant pieces of information.
+
+**Splunk**
+
+```| transaction TargetProcessId```
+
+**CQL**
+
+```#event_simpleName=ProcessRollup2```
+```| join({#event_simpleName=NetworkListenIP4 LocalPort<1024 LocalPort!=0}, field=TargetProcessId, ```
+```key=ContextProcessId, include=[LocalAddressIP4, LocalPort])``` 
+
+Notes:In progress
+
+
 **Splunk Dashboard Logic**
 
 ```<drilldown>```
