@@ -12,8 +12,8 @@ Description: To conduct a basic search in SPL vs CQL
 
 Notes: No need to define index or sourcetype, there is only CS just search off event_simpleName "#" is required.
 
-## Token Search
-Description: To conduct a "token" search in SPL vs CQL
+## Token Search (unsupported)
+Description: Crowdstrike does not support token search like in Splunk.
 
 **Splunk**
 
@@ -21,20 +21,23 @@ Description: To conduct a "token" search in SPL vs CQL
 
 **CQL**
 
-```#event_simpleName=foo token``` 
+```N/A``` 
 
 Notes: NA
 
 ## Logic Operators (AND vs and)
-Description: To conduct a "token" with two conditions present search in SPL vs CQL. The "AND" in splunk is capital while the "and" in CQL is lowercase. Both are implicit with a space " " 
+Description: To conduct a query with two conditions present search in SPL vs CQL. The "AND" in splunk is capital while the "and" in CQL is lowercase. Both are implicit with a space " " 
 
 **Splunk**
 
-```index=foo sourcetype=bar token1 token2```
+```index=foo sourcetype=bar field1=value field1=value ```
 
+```index=foo sourcetype=bar field1=value AND field1=value ```
 **CQL**
 
-```#event_simpleName=foo token1 token2``` 
+```#event_simpleName=foo field1=value field1=value``` 
+
+```#event_simpleName=foo field1=value and field1=value``` 
 
 Notes: In both splunk and CS the "AND" "and" is implicit with a " " space
 
