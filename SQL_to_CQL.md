@@ -3,6 +3,10 @@
 ## Create New Field
 Description: To make a new field from a value in the search use the follwing syntax
 
-Splunk                                                        CQL
+Splunk
 
-| eval field=value                                            | field := value                                    
+```| eval field=value```
+
+CQL
+
+```| field := value```               
