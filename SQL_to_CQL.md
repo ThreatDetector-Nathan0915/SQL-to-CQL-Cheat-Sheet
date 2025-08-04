@@ -9,4 +9,27 @@ Description: To make a new field from a value in the search use the follwing syn
 
 **CQL**
 
-```| field := value```               
+```| field := value``` 
+
+## Regex Syntax
+Description: To use regex filtering in your CQL query.
+
+**Splunk**
+
+```| regex field="(?i)\\\(match|match2)\\\```
+
+Notes: 
++ (?i) case incentive token.
++ | or statement
++ " regex " used to identify start and end of regex
++ \\ two escapes needed to escape single "\"
+
+**CQL**
+
+```field=/\\(match1|match2)\\/i``` 
+
+Notes:
++ /i for case incentive token
++ | or statement
++ / regex / used to identify regex
++ one \ needed to escape single "\"
