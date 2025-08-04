@@ -195,6 +195,20 @@ Description: Stats is very powerfull in splunk it can be used to corelate and fi
 
 Notes: This is a very simple example and it can get exponentially more complex. But just as a starter they both do the same thing they group results by the chosen field. With the caveat that CQL has a limit of 20k results so if you want more than that you must define a greater limit with ", limit=max". Also instead of calling "count" like in splunk we are calling the count function and defining was field we want counted and what we want the result name field returned as.
 
+## Stats Values
+Description: Stats values can be used to help sumarize unique values in a field, giving summary context of unique commandline exectuions for example in a simmple easy readable format. In CQL the equivalent is collect()
+
+**Splunk**
+
+```| stats values(foo_bar) as foo_bar count by BaseImageFileName```
+
+**CQL**
+
+```| groupBy(baseimagefilename, function=[count(baseimagefilename, as=count), collect(foo_bar)])``` 
+
+Notes: Notice in CQL we have to be more deliberate about how we want our results to look, which is available in SPL but not required, most the time.
+
+Notes:
 ## Drilldown Filter (Unsupported in Splunk Search)
 Description: In CrowdStrike when conducting searches you may want to filter through your tabled out results. Similar to how a splunk drilldowns in dashboard works. You can do this directly in the query rather than creating an entire dashboard that calls the search like in SPL.
 
