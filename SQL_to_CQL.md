@@ -34,7 +34,7 @@ Notes:
 + (?i) case incentive token.
 + | or statement
 + " regex " used to identify start and end of regex
-+ \\ two escapes needed to escape single "\"
++ \\\\ two escapes needed to escape single "\\\"
 
 **CQL**
 
