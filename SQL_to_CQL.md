@@ -110,8 +110,6 @@ Note: the "*" wild card is used in SPL, where in CQL you call the field again bu
 
 ## Regex Syntax
 Description: To use regex filtering in your CQL query.
-## Regex Syntax
-Description: To use regex filtering in your CQL query.
 
 **Splunk**
 
