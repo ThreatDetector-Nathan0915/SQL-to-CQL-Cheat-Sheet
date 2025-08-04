@@ -44,4 +44,4 @@ Notes:
 + /i for case incentive token
 + | or statement
 + / regex / used to identify regex
-+ one \ needed to escape single "\"
++ one \ needed to escape single "\\"
