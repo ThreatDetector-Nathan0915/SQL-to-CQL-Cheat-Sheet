@@ -186,7 +186,7 @@ Description: In CrowdStrike when conducting searches you may want to filter thro
 
 ```<drilldown>```
 
-      ```<eval token="arg1">$click.value2$</eval>```
+      <eval token="arg1">$click.value2$</eval>
       
 ```</drilldown>```
 
