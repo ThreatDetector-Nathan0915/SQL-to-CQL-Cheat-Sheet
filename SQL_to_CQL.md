@@ -100,9 +100,9 @@ Description: Sometimes you need to eval a field to a specific value based off a 
 
 ```| case { field1 = "999" | foo_bar := "weegood";```
 
-      ```field1 > "999" | foo_bar := "its not good";```
+       field1 > "999" | foo_bar := "its not good";
       
-     ```field1 < "1000000" | foo_bar := "its just okay test"}```
+       field1 < "1000000" | foo_bar := "its just okay test"}
      
 
 ## Wild-Card Field Search (Same)
