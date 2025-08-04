@@ -36,7 +36,7 @@ Description: To conduct a "token" with two conditions present search in SPL vs C
 
 ```#event_simpleName=foo token1 token2``` 
 
-Notes: In both splunk and CS the "AND"/"and" is implicit with a " " space
+Notes: In both splunk and CS the "AND" "and" is implicit with a " " space
 
 ## Logic Operators (NOT)
 Description: To conduct a conitional search in SPL vs CQL where NOT is used
