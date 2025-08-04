@@ -89,6 +89,19 @@ Description: To make a new field from a value in the search use the following sy
 
 ```| field := field``` 
 
+## Eval Case Conditions
+Description: Sometimes you need to eval a field to a specific value based off a condition in your search, in spl we use an eval case, in CQL its similar but with some differnet syntax requiremnets.
+
+**Splunk**
+
+```| eval foo_bar= case(field1="999", "weegood", field1 > 999, "its not good", field1 < 1000000, "its just okay")```
+
+**CQL**
+
+```| case { field1 = "999" | foo_bar := "weegood";```
+      ```field1 > "999" | foo_bar := "its not good";```
+     ```field1 < "1000000" | foo_bar := "its just okay test"}```
+
 ## Wild-Card Field Search (Same)
 Description: In Splunk alot of times you want a field to have value but you're unsure what the at value is. Here's how you do it in SPL vs CQL
 
@@ -167,7 +180,7 @@ Description: To table fields from the results of a search in SPL vs CQL
 
 ```| select([field1, field2, field3, field4])``` 
 ## Stats Count
-Description: Stats is very powerfull in splunk na dcan be used to corelate and filter results, in CQL "group" is the equivalent.
+Description: Stats is very powerfull in splunk it can be used to corelate and filter results, in CQL "group" is the equivalent.
 
 **Splunk**
 
