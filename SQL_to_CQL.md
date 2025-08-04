@@ -33,6 +33,7 @@ Description: To conduct a query with two conditions present search in SPL vs CQL
 ```index=foo sourcetype=bar field1=value field1=value ```
 
 ```index=foo sourcetype=bar field1=value AND field1=value ```
+
 **CQL**
 
 ```#event_simpleName=foo field1=value field1=value``` 
