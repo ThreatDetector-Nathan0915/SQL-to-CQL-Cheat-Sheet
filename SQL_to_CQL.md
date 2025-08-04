@@ -55,7 +55,7 @@ Description: To conduct a conditional search in SPL vs CQL where NOT is used
 
 ```#event_simpleName=foo field1=value !field2=value```
 
-Notes: In both splunk and CS the not term, but in CQL lowercase. Additional functionality not present in SPL is, !token which uses the "!" as a not as well.
+Notes: In both splunk and CS the not term, but in CQL lowercase. Additional functionality not present in SPL is, !field which uses the "!" as a not as well.
 
 ## Comparison Operators
 Description: These are identical to Splunk.
