@@ -110,7 +110,7 @@ Description: In Splunk alot of times you want a field to have value but you're u
 ```| field=value*```
 
 
-## Regex Syntax
+## Regex Syntax (Filter)
 Description: To use regex filtering in your CQL query.
 
 **Splunk**
@@ -133,6 +133,29 @@ Notes:
 + / regex / used to identify regex
 + one \ needed to escape single "\\"
 
+## Regex Syntax (Field Extraction)
+Description: To use regex field extraction
+
+**Splunk**
+
+```| rex field=field "(?<new_field>(?is)pattern_to_match.+)"```
+
+Notes: 
++ (?is) - case incentive token space incentive token.
++ | rex - use regex field extraction
++ " regex " - this is regex pattern
++ (?<new_field>pattern_to_match) - this is field name and pattern I want in that field
+  
+**CQL**
+
+```| field = /(?<new_field>pattern_to_match)/i ``` 
+
+Notes:
++ /i - for case incentive token
++ | field - you just call the field you want to extract from
++ / regex / - this is the regex pattern
++ (?<new_field>pattern_to_match) - this is the name of the field that will be extracted and the data that will be put in it.
+  
 ## Table Results
 Description: To table fields from the results of a search in SPL vs CQL
 
