@@ -85,15 +85,28 @@ Description: To make a new field from a value in the search use the following sy
 
 ```| field := value``` 
 
-## Wild-Card Field Search
+```| field := field``` 
+
+## Wild-Card Field Search (Same)
 Description: In Splunk alot of times you want a field to have value but you're unsure what the at value is. Here's how you do it in SPL vs CQL
+
 **Splunk**
 
 ```| field=*```
 
+```| field=*value*```
+
+```| field=value*```
+
+
 **CQL**
 
-```| field=?field``` 
+```| field=*```
+
+```| field=*value*```
+
+```| field=value*```
+
 
 Note: the "*" wild card is used in SPL, where in CQL you call the field again but with a "?" leading.
 
