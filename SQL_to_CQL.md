@@ -57,11 +57,13 @@ Description: To conduct a conitional search in SPL vs CQL where NOT is used
 **Splunk**
 
 ```index=foo sourcetype=bar token1 NOT field=value```
+
 ```index=foo sourcetype=bar token1 field!=value```
 
 **CQL**
 
 ```#event_simpleName=foo token1 not field=value``` 
+
 ```#event_simpleName=foo token1 field!=value```
 
 Notes: In both splunk and CS the syntax is nearly identical.
