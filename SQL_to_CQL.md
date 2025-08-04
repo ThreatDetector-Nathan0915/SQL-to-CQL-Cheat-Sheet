@@ -30,15 +30,15 @@ Description: To conduct a query with two conditions present search in SPL vs CQL
 
 **Splunk**
 
-```index=foo sourcetype=bar field1=value field1=value ```
+```index=foo sourcetype=bar field1=value field2=value ```
 
-```index=foo sourcetype=bar field1=value AND field1=value ```
+```index=foo sourcetype=bar field1=value AND field2=value ```
 
 **CQL**
 
-```#event_simpleName=foo field1=value field1=value``` 
+```#event_simpleName=foo field1=value field2=value``` 
 
-```#event_simpleName=foo field1=value and field1=value``` 
+```#event_simpleName=foo field1=value and field2=value``` 
 
 Notes: In both splunk and CS the "AND" "and" is implicit with a " " space
 
@@ -47,31 +47,16 @@ Description: To conduct a conditional search in SPL vs CQL where NOT is used
 
 **Splunk**
 
-```index=foo sourcetype=bar token1 NOT token2```
+```index=foo sourcetype=bar field1=value NOT field2=value```
 
 **CQL**
 
-```#event_simpleName=foo token1 not token2``` 
+```#event_simpleName=foo field1=value not field2=value``` 
 
-```#event_simpleName=foo token1 !token2```
+```#event_simpleName=foo field1=value !field2=value```
 
 Notes: In both splunk and CS the not term, but in CQL lowercase. Additional functionality not present in SPL is, !token which uses the "!" as a not as well.
-## Logic Operators (NOT field=value)
-Description: To conduct a conitional search in SPL vs CQL where NOT is used
 
-**Splunk**
-
-```index=foo sourcetype=bar token1 NOT field=value```
-
-```index=foo sourcetype=bar token1 field!=value```
-
-**CQL**
-
-```#event_simpleName=foo token1 not field=value``` 
-
-```#event_simpleName=foo token1 field!=value```
-
-Notes: In both splunk and CS the syntax is nearly identical.
 ## Comparison Operators
 Description: These are identical to Splunk.
 
