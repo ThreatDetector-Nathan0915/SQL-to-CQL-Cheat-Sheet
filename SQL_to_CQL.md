@@ -1,4 +1,4 @@
-# To help all splunkers in Splunk Processing Language (SPL) who have been forced to adopt Crowdstrike Query Language (CQL)
+# To help splunkers transitioning from Splunk Processing Language (SPL) to Crowdstrike Query Language (CQL)
 ## Basic Field Search
 Description: To conduct a basic search in SPL vs CQL
 
