@@ -98,12 +98,13 @@ Description: Sometimes you need to eval a field to a specific value based off a 
 
 **CQL**
 
-```| case { field1 = "999" | foo_bar := "weegood";```
+```
+| case { field1 = "999" | foo_bar := "weegood";
 
        field1 > "999" | foo_bar := "its not good";
       
        field1 < "1000000" | foo_bar := "its just okay test"}
-     
+```
 
 ## Wild-Card Field Search (Same)
 Description: In Splunk alot of times you want a field to have value but you're unsure what the at value is. Here's how you do it in SPL vs CQL
