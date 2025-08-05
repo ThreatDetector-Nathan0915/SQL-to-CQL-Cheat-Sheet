@@ -30,15 +30,17 @@ Description: To conduct a query with two conditions present search in SPL vs CQL
 
 **Splunk**
 
-```index=foo sourcetype=bar field1=value field2=value ```
-
-```index=foo sourcetype=bar field1=value AND field2=value ```
+```
+index=foo sourcetype=bar field1=value field2=value
+index=foo sourcetype=bar field1=value AND field2=value
+```
 
 **CQL**
 
-```#event_simpleName=foo field1=value field2=value``` 
-
-```#event_simpleName=foo field1=value and field2=value``` 
+```
+#event_simpleName=foo field1=value field2=value
+#event_simpleName=foo field1=value and field2=value
+``` 
 
 Notes: In both splunk and CS the "AND" "and" is implicit with a " " space
 
@@ -51,9 +53,10 @@ Description: To conduct a conditional search in SPL vs CQL where NOT is used
 
 **CQL**
 
-```#event_simpleName=foo field1=value not field2=value``` 
-
-```#event_simpleName=foo field1=value !field2=value```
+```
+#event_simpleName=foo field1=value not field2=value
+#event_simpleName=foo field1=value !field2=value
+```
 
 Notes: In both splunk and CS the not term, but in CQL lowercase. Additional functionality not present in SPL is, !field which uses the "!" as a not as well.
 
@@ -62,32 +65,31 @@ Description: These are identical to Splunk.
 
 **CQL/Splunk**
 
-```field < value```
-
-```field <= value```
-
-```field = value```
-
-```field != value```
-
-```field >= value```
-
-```field > value``` 
+```
+field < value
+field <= value
+field = value
+field != value
+field >= value
+field > value
+``` 
 
 ## Create New Field
 Description: To make a new field from a value in the search use the following syntax.
 
 **Splunk**
 
-```| eval field=value```
-
-```| eval field=field```
+```
+| eval field=value
+| eval field=field
+```
 
 **CQL**
 
-```| field := value``` 
-
-```| field := field``` 
+```
+| field := value
+| field := field
+``` 
 
 ## Eval Case Conditions
 Description: Sometimes you need to eval a field to a specific value based off a condition in your search, in spl we use an eval case, in CQL its similar but with some differnet syntax requiremnets.
@@ -111,20 +113,24 @@ Description: In Splunk alot of times you want a field to have value but you're u
 
 **Splunk**
 
-```| field=*```
+```
+| field=*
 
-```| field=*value*```
+| field=*value*
 
-```| field=value*```
+| field=value*
+```
 
 
 **CQL**
 
-```| field=*```
+```
+| field=*
 
-```| field=*value*```
+| field=*value*
 
-```| field=value*```
+| field=value*
+```
 
 
 ## Regex Syntax (Filter)
@@ -222,20 +228,24 @@ Description: Many times throughout creation of correlation searches two events w
 
 **CQL**
 
-```#event_simpleName=ProcessRollup2```
-```| join({#event_simpleName=NetworkListenIP4 LocalPort<1024 LocalPort!=0}, field=TargetProcessId, ```
-```key=ContextProcessId, include=[LocalAddressIP4, LocalPort])``` 
+```
+#event_simpleName=ProcessRollup2
+| join({#event_simpleName=NetworkListenIP4 LocalPort<1024 LocalPort!=0}, field=TargetProcessId,
+key=ContextProcessId, include=[LocalAddressIP4, LocalPort])
+``` 
 
 Notes:In progress
 
 
 **Splunk Dashboard Logic**
 
-```<drilldown>```
+```
+<drilldown>
 
       <eval token="arg1">$click.value2$</eval>
       
-```</drilldown>```
+</drilldown>
+```
 
 **CQL**
 
