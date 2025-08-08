@@ -12,7 +12,7 @@ Description: To conduct a basic search in SPL vs CQL
 
 Notes: No need to define index or sourcetype, there is only CS just search off event_simpleName "#" is required.
 
-## Token Search (unsupported)
+## Token Search
 Description: Crowdstrike does support open searches.
 
 **Splunk**
